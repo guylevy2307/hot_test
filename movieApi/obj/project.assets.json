@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guyle\\source\\repos\\hot_home_assigment\\movieApi\\movieApi.csproj",
+      "projectUniqueName": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj",
       "projectName": "movieApi",
-      "projectPath": "C:\\Users\\guyle\\source\\repos\\hot_home_assigment\\movieApi\\movieApi.csproj",
+      "projectPath": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj",
       "packagesPath": "C:\\Users\\guyle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guyle\\source\\repos\\hot_home_assigment\\movieApi\\obj\\",
+      "outputPath": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
