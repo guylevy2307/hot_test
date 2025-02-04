@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MovieService {
+  serverUrl="http://localhost:5049/api/Movies"
 
  constructor(private http:HttpClient) { }
 
 
  getAllCars(): Observable<MovieItem[]>{
-  return this.http.get<MovieItem[]>('http://localhost:5049/api/Movies');
+  return this.http.get<MovieItem[]>(this.serverUrl);
 }
 }
