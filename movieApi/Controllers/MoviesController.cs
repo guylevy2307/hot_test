@@ -18,6 +18,7 @@ namespace movieApi.Controllers
             _businessLogic = businessLogic;
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetMovies()
         {
             var movies = await _businessLogic.GetMoviesAsync();
