@@ -1,6 +1,25 @@
+<div class="search-container">
+  <input
+    [(ngModel)]="searchQuery"
+    (keyup.enter)="onSearch()"
+    type="text"
+    placeholder="Search movies..."
+    class="search-input"
+  />
+  <button (click)="onSearch()" class="search-button">Search</button>
+</div>
+
+<div class="sorting-container">
+  <label for="sortBy">Sort by:</label>
+  <select id="sortBy" [(ngModel)]="sortOption" (change)="onSort()">
+    <option value="title">Title</option>
+    <option value="year">Year</option>
+  </select>
+</div>
+
 <div class="movie-list">
   <app-movie-item
-    *ngFor="let movie of moviesList$ | async"
+    *ngFor="let movie of filteredMovies"
     [movie]="movie"
   ></app-movie-item>
 </div>
