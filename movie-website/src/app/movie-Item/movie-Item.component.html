@@ -18,5 +18,9 @@
     <button mat-button (click)="nextImage()">
       Next <mat-icon>navigate_next</mat-icon>
     </button>
+    <button mat-button (click)="toggleFavorite()">
+      <mat-icon>{{ isFavorite() ? "favorite" : "favorite_border" }}</mat-icon>
+      {{ isFavorite() ? "Remove from Favorites" : "Add to Favorites" }}
+    </button>
   </mat-card-actions>
 </mat-card>
