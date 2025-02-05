@@ -1,69 +1,69 @@
-class MovieItem {
-  Title: string;
-  Year: string;
-  Rated: string;
-  Released: string;
-  Runtime: string;
-  Genre: string;
-  Director: string;
-  Writer: string;
-  Actors: string;
-  Plot: string;
-  Language: string;
-  Country: string;
-  Awards: string;
-  Poster: string;
-  Metascore: string;
+export class MovieItem {
+  title: string;
+  year: string;
+  rated: string;
+  released: string;
+  runtime: string;
+  genre: string;
+  director: string;
+  writer: string;
+  actors: string;
+  plot: string;
+  language: string;
+  country: string;
+  awards: string;
+  poster: string;
+  metascore: string;
   imdbRating: string;
   imdbVotes: string;
   imdbID: string;
-  Type: string;
-  Response: string;
-  Images: string[];
+  type: string;
+  response: string;
+  images: string[];
 
   constructor(
-    Title: string,
-    Year: string,
-    Rated: string,
-    Released: string,
-    Runtime: string,
-    Genre: string,
-    Director: string,
-    Writer: string,
-    Actors: string,
-    Plot: string,
-    Language: string,
-    Country: string,
-    Awards: string,
-    Poster: string,
-    Metascore: string,
+    title: string,
+    year: string,
+    rated: string,
+    released: string,
+    runtime: string,
+    genre: string,
+    director: string,
+    writer: string,
+    actors: string,
+    plot: string,
+    language: string,
+    country: string,
+    awards: string,
+    poster: string,
+    metascore: string,
     imdbRating: string,
     imdbVotes: string,
     imdbID: string,
-    Type: string,
-    Response: string,
-    Images: string[]
+    type: string,
+    response: string,
+    images: string[]
   ) {
-    this.Title = Title;
-    this.Year = Year;
-    this.Rated = Rated;
-    this.Released = Released;
-    this.Runtime = Runtime;
-    this.Genre = Genre;
-    this.Director = Director;
-    this.Writer = Writer;
-    this.Actors = Actors;
-    this.Plot = Plot;
-    this.Language = Language;
-    this.Country = Country;
-    this.Awards = Awards;
-    this.Poster = Poster;
-    this.Metascore = Metascore;
+    this.title = title;
+    this.year = year;
+    this.rated = rated;
+    this.released = released;
+    this.runtime = runtime;
+    this.genre = genre;
+    this.director = director;
+    this.writer = writer;
+    this.actors = actors;
+    this.plot = plot;
+    this.language = language;
+    this.country = country;
+    this.awards = awards;
+    this.poster = poster;
+    this.metascore = metascore;
     this.imdbRating = imdbRating;
     this.imdbVotes = imdbVotes;
     this.imdbID = imdbID;
-    this.Type = Type;
-    this.Response = Response;
-    this.Images = Images;
+    this.type = type;
+    this.response = response;
+    this.images = images;
   }
 }

@@ -1,30 +1,22 @@
 <mat-card class="movie-card">
   <mat-card-header>
-    <mat-card-title>{{ movie.Title }}</mat-card-title>
-    <mat-card-subtitle>{{ movie.Year }}</mat-card-subtitle>
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-title>{{ movie.year }}</mat-card-title>
   </mat-card-header>
 
-  <mat-tab-group>
-    <mat-tab *ngFor="let image of movie.Images">
-      <ng-template mat-tab-label>
-        <img [src]="image" class="tab-thumbnail" alt="Thumbnail" />
-      </ng-template>
-      <div class="img-wrapper">
-        <img mat-card-image [src]="image" alt="{{ movie.Title }}" />
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+  <!-- Display the current image -->
+  <img
+    mat-card-image
+    [src]="movie.images[currentImageIndex]"
+    alt="{{ movie.title }} image"
+  />
 
-  <mat-card-actions class="card-actions">
-    <button mat-raised-button color="primary" (click)="toggleFavorite()">
-      {{ isFavorite ? "Unfavorite" : "Favorite" }}
+  <mat-card-actions>
+    <button mat-button (click)="prevImage()">
+      <mat-icon>navigate_before</mat-icon> Previous
     </button>
-    <!-- <button
-      mat-raised-button
-      color="accent"
-      [routerLink]="'/editMovie/' + movie.imdbID"
-    >
-      Edit
-    </button> -->
+    <button mat-button (click)="nextImage()">
+      Next <mat-icon>navigate_next</mat-icon>
+    </button>
   </mat-card-actions>
 </mat-card>

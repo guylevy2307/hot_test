@@ -1,27 +1,27 @@
-.movie-card {
-  max-width: 350px;
-  margin: auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
+mat-card {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
 
-  .img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    background: #f0f0f0;
+mat-card img {
+  width: 100%;
+  height:auto;
+  object-fit: fill;
+}
 
-    img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: cover;
-    }
-  }
+mat-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
 
-  .card-actions {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
+mat-card-title:nth-of-type(2) {
+  font-size: 12px;
+  color: gray;
+}
+::ng-deep .mat-mdc-card-header {
+  padding: 0px !important;
 }
