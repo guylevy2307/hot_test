@@ -26,24 +26,25 @@ namespace movieApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllers();
             var key = Encoding.ASCII.GetBytes(Configuration["JwtSettings:SecretKey"]);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(key),
-                        ValidateIssuer = false, 
-                        ValidateAudience = false, 
-                        ValidateLifetime = true 
-                    };
-                });
+       .AddJwtBearer(options =>
+       {
+           options.RequireHttpsMetadata = false; 
+            options.SaveToken = true;
+           options.TokenValidationParameters = new TokenValidationParameters
+           {
+               ValidateIssuerSigningKey = true,
+               IssuerSigningKey = new SymmetricSecurityKey(key),
+               ValidateIssuer = false,  
+                ValidateAudience = false, 
+                ValidateLifetime = true
+           };
+       });
 
             services.AddSwaggerGen(c =>
             {
@@ -74,7 +75,15 @@ namespace movieApi
             }
         });
             });
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAnyOrigin",
+                    builder => builder
+                       .WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()     
+                        .AllowAnyMethod());    
+            });
+            services.AddAuthorization();
             services.AddSingleton<BL>();
         }
 
@@ -91,7 +100,7 @@ namespace movieApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("AllowAnyOrigin");
             app.UseAuthentication();
             app.UseAuthorization();
 

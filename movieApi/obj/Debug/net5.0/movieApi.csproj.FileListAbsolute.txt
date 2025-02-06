@@ -5,7 +5,6 @@ C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.deps.jso
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.runtimeconfig.json
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.runtimeconfig.dev.json
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.dll
-C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\ref\movieApi.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.pdb
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -19,10 +18,8 @@ C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.csproj.C
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\movieApi.StaticWebAssets.Manifest.cache
-C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\movieApi.StaticWebAssets.xml
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\scopedcss\bundle\movieApi.styles.css
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.RazorTargetAssemblyInfo.cache
-C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.csproj.CopyComplete
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\ref\movieApi.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.pdb
@@ -34,3 +31,12 @@ C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\Microsoft.Identit
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\guyle\Source\Repos\hot_test\movieApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\guyle\source\repos\hot_test\movieApi\bin\Debug\net5.0\movieApi.StaticWebAssets.xml
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.sourcelink.json
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\movieApi.StaticWebAssets.Pack.cache
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\msbuild.movieApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\msbuild.build.movieApi.props
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.movieApi.props
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.movieApi.props
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\movieApi.csproj.Up2Date
+C:\Users\guyle\source\repos\hot_test\movieApi\obj\Debug\net5.0\refint\movieApi.dll

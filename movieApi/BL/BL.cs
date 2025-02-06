@@ -21,15 +21,13 @@ public class BL
     {
         try
         {
-            // Get API URL from configuration
-            string apiUrl = _config["MovieApi:BaseUrl"]; // Example: "https://api.example.com/movies"
+            string apiUrl = _config["MovieApi:BaseUrl"];
 
             if (string.IsNullOrEmpty(apiUrl))
             {
                 throw new Exception("API URL is not configured.");
             }
 
-            // Make an HTTP GET request
             HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
 
             if (!response.IsSuccessStatusCode)
@@ -49,7 +47,7 @@ public class BL
         catch (Exception ex)
         {
             Console.WriteLine($"Exception in GetMoviesAsync: {ex.Message}");
-            return new List<MovieItem>(); // Return an empty list on failure
+            return new List<MovieItem>(); 
         }
     }
 }

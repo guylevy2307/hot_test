@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace movieApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/movies")]
     public class MoviesController : ControllerBase
@@ -18,7 +19,6 @@ namespace movieApi.Controllers
             _businessLogic = businessLogic;
         }
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetMovies()
         {
             var movies = await _businessLogic.GetMoviesAsync();

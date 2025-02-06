@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj": {}
+    "C:\\Users\\guyle\\source\\repos\\hot_test\\movieApi\\movieApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj": {
+    "C:\\Users\\guyle\\source\\repos\\hot_test\\movieApi\\movieApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj",
+        "projectUniqueName": "C:\\Users\\guyle\\source\\repos\\hot_test\\movieApi\\movieApi.csproj",
         "projectName": "movieApi",
-        "projectPath": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\movieApi.csproj",
+        "projectPath": "C:\\Users\\guyle\\source\\repos\\hot_test\\movieApi\\movieApi.csproj",
         "packagesPath": "C:\\Users\\guyle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guyle\\Source\\Repos\\hot_test\\movieApi\\obj\\",
+        "outputPath": "C:\\Users\\guyle\\source\\repos\\hot_test\\movieApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -55,10 +60,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -67,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
