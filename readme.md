@@ -1,5 +1,5 @@
-hi first i recoment to open the server and run using the cmd the server :
-1. open the project folder
+hi thank you for using my web application :
+1. open the server side project folder
 2. open cmd
 3. type : "dotnet run"
 4. MAKE SURE: the server run on localhost:5001 !!
