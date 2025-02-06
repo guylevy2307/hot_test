@@ -1,28 +1,52 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { MovieItem } from '../../Models/MovieItem';
+import { environment } from '../environment';
+import { catchError, switchMap, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService  {
-  serverUrl = "https://localhost:5001/api/Movies";
+export class MovieService {
+  serverUrl = environment.apiUrl;
+  public tokenSubject = new BehaviorSubject<string | null>(null);
+  constructor(private http: HttpClient) {
+    this.fetchToken();
+  }
 
-  constructor(private http: HttpClient) { }
+  private fetchToken(): void {
+    this.http.get<any>(`${this.serverUrl}/token`).subscribe({
+      next: response => {
+        this.tokenSubject.next(response.token);
+      },
+      error: err => {
+        console.error('Failed to fetch token:', err);
+      }
+    });
+  }
 
   getAllMovies(): Observable<MovieItem[]> {
+    return this.tokenSubject.asObservable().pipe(
+      switchMap(token => {
+        if (!token) {
+          throw new Error('No token available');
+        }
 
-    // const token = localStorage.getItem('Token');
+        const httpOptions = {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          })
+        };
 
-    // const httpOptions = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type': 'application/json',
-    //     'Authorization': token ? `Bearer ${token}` : '' // If token exists, add it to Authorization header
-    //   })
-    // };
-
-    // Make the HTTP GET request with the Authorization header
-    return this.http.get<MovieItem[]>(this.serverUrl);
+        return this.http.get<MovieItem[]>(`${this.serverUrl}/movies`, httpOptions).pipe(
+          catchError(err => {
+            console.error('Error fetching movies:', err);
+            throw err;
+          })
+        );
+      })
+    );
   }
 }

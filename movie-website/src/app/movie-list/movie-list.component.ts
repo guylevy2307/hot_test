@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css'],
   standalone:true,
-  imports: [AsyncPipe,MovieItemComponent,NgFor,FormsModule ]
+  imports: [MovieItemComponent,NgFor,FormsModule ]
 })
 export class MovieListComponent implements OnInit {
   moviesList$!: Observable<MovieItem[]>;
@@ -21,10 +21,17 @@ export class MovieListComponent implements OnInit {
   constructor(private movieService:MovieService) { }
 
   ngOnInit() {
-    this.moviesList$ = this.movieService.getAllMovies();
-    this.moviesList$.subscribe((movies) => {
-      this.filteredMovies = movies;
+
+    this.movieService.tokenSubject.asObservable().subscribe(token => {
+      if (token) {
+        this.movieService.getAllMovies().subscribe(movies => {
+          this.filteredMovies = movies;
+        });
+      } else {
+        console.error('No token available');
+      }
     });
+
   }
   onSearch(): void {
     let searchResults = this.filteredMovies;
